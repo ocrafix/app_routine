@@ -1,4 +1,4 @@
-const CACHE_NAME = 'routine-cache-v13';
+const CACHE_NAME = 'routine-cache-v14';
 
 const urlsToCache = [
   './404.html',
