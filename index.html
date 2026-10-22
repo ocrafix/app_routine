@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programme hebdo</title>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="icon" href="icons/icon-192.png"/>
+
+</head>
+<body>
+  <main class="page">
+    <div class="progress-track" aria-label="Progression">
+      <span class="progress-step active"><strong>1</strong> Jour</span>
+      <span class="progress-step"><strong>2</strong> Choix</span>
+      <span class="progress-step"><strong>3</strong> Programme</span>
+    </div>
+
+    <section class="hero">
+      <h1>Choisis ton jour</h1>
+    </section>
+
+    <section class="jours-grid" aria-label="Navigation par jour">
+      <a class="jour-card" href="jour_lundi.html"><h2>Lundi</h2></a>
+      <a class="jour-card" href="jour_mardi.html"><h2>Mardi</h2></a>
+      <a class="jour-card" href="jour_mercredi.html"><h2>Mercredi</h2></a>
+      <a class="jour-card" href="jour_jeudi.html"><h2>Jeudi</h2></a>
+      <a class="jour-card" href="jour_vendredi.html"><h2>Vendredi</h2></a>
+      <a class="jour-card" href="jour_samedi.html"><h2>Samedi</h2></a>
+      <a class="jour-card" href="jour_dimanche.html"><h2>Dimanche</h2></a>
+    </section>
+  </main>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+          console.error("Impossible d'enregistrer le service worker.", error);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
